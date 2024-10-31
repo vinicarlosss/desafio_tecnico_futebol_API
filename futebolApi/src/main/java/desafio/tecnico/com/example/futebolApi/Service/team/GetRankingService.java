@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+import static desafio.tecnico.com.example.futebolApi.Mapper.team.GetRankingMapper.toResponse;
+
 @Service
 public class GetRankingService {
 
@@ -19,6 +21,6 @@ public class GetRankingService {
     public List<GetRankingResponse> get() {
 
         List<Team> teams = teamRepository.findAllByOrderByPositionAsc();
-        return GetRankingMapper.toResponse(teams);
+        return toResponse(teams);
     }
 }

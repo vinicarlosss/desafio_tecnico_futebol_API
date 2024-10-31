@@ -14,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
+import static desafio.tecnico.com.example.futebolApi.Mapper.team.GetTeamMapper.toResponse;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @Service
@@ -29,6 +30,6 @@ public class GetTeamService {
         Team team = teamRepository.findById(teamId).orElseThrow(() ->
                 new ResponseStatusException(NOT_FOUND, "Time não encontrado"));
         List<Player> teamPlayers = playerRepository.findByTeamIdOrderByPosition(teamId);
-        return GetTeamMapper.toResponse(team, teamPlayers);
+        return toResponse(team, teamPlayers);
     }
 }
