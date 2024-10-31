@@ -1,8 +1,6 @@
 package desafio.tecnico.com.example.futebolApi.Domain.team;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,12 +12,15 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "team")
 public class Team {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
-    private int matches_played;
+    private String teamName;
+    private int matchesPlayed;
     private int win;
     private int draw;
     private int loss;

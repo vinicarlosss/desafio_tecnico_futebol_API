@@ -16,11 +16,13 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "matches")
 public class Matches {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    private int id;
+    private Long id;
     @ManyToOne
     @JoinColumn(name = "team_id")
     private Team team;
