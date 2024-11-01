@@ -1,5 +1,6 @@
 package desafio.tecnico.com.example.futebolApi.Controller.team.response;
 
+import desafio.tecnico.com.example.futebolApi.Domain.matches.Matches;
 import lombok.Builder;
 import lombok.Data;
 
@@ -21,4 +22,5 @@ public class GetTeamResponse {
     private int points;
     private int position;
     private List<GetTeamPlayerResponse> players;
+    private List<GetTeamMatchesResponse> matches;
 }

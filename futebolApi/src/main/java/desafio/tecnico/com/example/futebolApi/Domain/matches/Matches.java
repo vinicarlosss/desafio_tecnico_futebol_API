@@ -35,9 +35,9 @@ public class Matches {
     private LocalDateTime date;
     private String round;
     private String weekDay;
-    private int goalsFor;
-    private int goalsAgainst;
-    private int poss;
+    private Integer goalsFor;
+    private Integer goalsAgainst;
+    private Integer poss;
     private String formation;
     private String opponentFormation;
     private String venue;
