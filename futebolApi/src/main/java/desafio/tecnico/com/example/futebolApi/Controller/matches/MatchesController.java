@@ -1,6 +1,7 @@
 package desafio.tecnico.com.example.futebolApi.Controller.matches;
 
 import desafio.tecnico.com.example.futebolApi.Controller.matches.response.GetAllMatchesResponse;
+import desafio.tecnico.com.example.futebolApi.Service.matches.GetAllMatchesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
